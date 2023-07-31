@@ -1,0 +1,33 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <h1 class="ml20 mt20">Available Quizs</h1>
+        <div class="row mt20" *ngIf="quizs">
+            <div class="col-md-4" *ngFor="let q of quizs">
+                <mat-card class="mb20" >
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>{{q.category.name}}</mat-card-title>
+                        <mat-card-subtitle>{{q.title}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p class="truncate">{{q.description}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" [routerLink]="'/user-dashboard/instructions/' + q.id">Start</button>
+                        <button mat-raised-button color="accent" class="ml10">View</button>
+                        <button mat-button color="accent">Questions: {{q.numberOfQuestions}}</button>
+                        <button mat-button color="accent">Marks: {{q.maxMarks}}</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+
+            <div class="col-md-12" *ngIf="quizs.length==0">
+                <mat-card>
+                    <mat-card-content>
+                        <h1>No Data in this actegory</h1>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

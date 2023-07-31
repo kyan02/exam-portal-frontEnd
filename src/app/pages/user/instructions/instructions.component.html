@@ -1,0 +1,45 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card *ngIf="quiz" class="mt10">
+                    <mat-card-header>
+                        <mat-card-title>Read the instructions carefully!!!</mat-card-title>
+                        <mat-card-subtitle>One more step to go</mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content>
+                        <h1>{{quiz.title}}</h1>
+                        <p>{{quiz.description}}</p>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Important Instructions</h1>
+                        <ul>
+                            <li>Quiz is for practice purpose</li>
+                            <li>Submit Quiz in {{quiz.numberOfQuestions*2}} mins</li>
+                            <li>Attend the quiz any number of time</li>
+                            <li>There are <b>{{quiz.numberOfQuestions}}</b> Questions in this quiz.</li>
+                            <li>Total marks for this quiz is <b>{{quiz.maxMarks}}</b></li>
+                            <li>Each Question carries <b>{{ quiz.maxMarks / quiz.numberOfQuestions}}</b> marks.</li>
+                            <li>No negative marking</li>
+                        </ul>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Attempting Quiz</h1>
+                        <ul>
+                            <li>Click <b>Start Test</b> button to start the quiz</li>
+                            <li>The time will start the moment you click the start button</li>
+                            <li>You can resume the quiz , if interrupted due to any reason</li>
+                            <li>Scroll down to move to next question</li>
+                            <li>Click on submit quiz button on completion of the quiz</li>
+                            <li>Report of the test is automatically generated in form of pdf copy</li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions class="ml">
+                        <button (click)="startQuizConfirmation()" mat-raised-button color="warn">START QUIZ</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.list-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+
+  
+  .item-container {
+    display: flex;
+  }
+  
+  .icon-container {
+    flex: 0 0 auto;
+    margin-right: 8px;
+  }
+  
+  .text-container {
+    flex: 1 1 auto;
+  }

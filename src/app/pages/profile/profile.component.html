@@ -1,0 +1,48 @@
+<mat-card>
+    <h1>Your Profile Details</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                        <img src="https://clipground.com/images/default-image-icon-png-4.png"
+                        alt="kit kit"
+                        class="profile-image"
+                        />
+
+                        <h1 class="mt20">{{user?.firstName}} {{user?.lastname}}</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <table class="table text-center">
+                                <tr>
+                                    <td>Username</td>
+                                    <td>{{user?.username}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>{{user?.email}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone</td>
+                                    <td>{{user?.phone}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Role</td>
+                                    <td>Admin</td>
+                                </tr>
+                                <tr>
+                                    <td>Status</td>
+                                    <td>{{user?.active}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </mat-card-content>
+    <mat-card-actions class="card">
+        <button mat-raised-button color="primary">UPDATE</button>
+        <button mat-raised-button color="accent" class="ml20">SHARE</button>
+      </mat-card-actions>
+</mat-card>
