@@ -1,6 +1,7 @@
 import { LocationStrategy } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 import { QuestionService } from 'src/app/services/question.service';
 import Swal from 'sweetalert2';
 
@@ -19,13 +20,19 @@ export class StartComponent {
   timer:any
   isSubmit = false;
 
-  constructor(private location : LocationStrategy, private _route: ActivatedRoute, private _question: QuestionService) {}
+  constructor(private location : LocationStrategy,
+     private _route: ActivatedRoute,
+     private _question: QuestionService,
+     private _login: LoginService) {}
+
+     user:any=null;
 
   ngOnInit() : void {
     this.preventBackButton();
     this.quizId = this._route.snapshot.params['quizId'];
     this.loadQuestions()
     this.startTimer();
+    this.user = this._login.getUser();
   }
 
   loadQuestions() {
@@ -88,7 +95,7 @@ export class StartComponent {
   evalQuiz() {
     console.log(this.questions)
     //call to server to evaluate quiz;
-    this._question.evalQuiz(this.questions).subscribe(
+    this._question.evalQuiz(this.questions, this.user.id).subscribe(
       (data:any)=>{
        this.totalMarks = data.totalMarks;
        this.attempted = data.attempted;

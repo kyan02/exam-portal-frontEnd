@@ -22,7 +22,7 @@ export class QuestionService {
     return this._http.delete(`${baseUrl}/question/${questionId}`)
   }
 
-  public evalQuiz(questions:any){
-    return this._http.post(`${baseUrl}/question/eval-quiz`,questions);
+  public evalQuiz(questions:any,user_id:any){
+    return this._http.post(`${baseUrl}/question/eval-quiz/${user_id}`,questions);
   }
 }

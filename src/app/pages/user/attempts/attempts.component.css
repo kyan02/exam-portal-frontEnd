@@ -1,0 +1,17 @@
+.example-header-image {
+    background-image: url("../../../../assets/report.png");
+    background-size: cover;
+  }
+
+/* .result {
+    background-image: url("../../../../assets/fail.png");
+    background-size: cover;
+  } */
+
+.result {
+    display: inline-block; /* Display the div as an inline block */
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */ /* Just an example background color */
+    background-image: url("../../../../assets/fail.png");
+    background-size: cover;
+}

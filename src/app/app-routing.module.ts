@@ -19,6 +19,7 @@ import { AddQuestionComponent } from './pages/admin/add-question/add-question.co
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { StartComponent } from './pages/user/start/start.component';
+import { AttemptsComponent } from './pages/user/attempts/attempts.component';
 
 const routes: Routes = [
 
@@ -85,6 +86,10 @@ const routes: Routes = [
     component : UserDashboardComponent,
     canActivate: [LearnerGuard],
     children: [
+      {
+        path : 'attempts',
+        component: AttemptsComponent
+      },
       {
         path : ':categoryId',
         component: LoadQuizComponent

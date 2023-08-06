@@ -2,11 +2,13 @@
     <mat-action-list>
         <div mat-subheader>Available Categories</div>
         <button mat-list-item routerLink="/user-dashboard/0">
-            <mat-icon mat-list-icon>account_circle</mat-icon> All Quiz
+            <mat-icon mat-list-icon>category</mat-icon> All Quiz
         </button>
         <button [routerLink]="'/user-dashboard/'+c.id" mat-list-item *ngFor="let c of categories">
-            <mat-icon mat-list-icon>account_circle</mat-icon> {{c.name}}
+            <mat-icon mat-list-icon>category</mat-icon> {{c.name}}
         </button>
+        <button routerLink ="/user-dashboard/attempts" mat-list-item >
+            <mat-icon mat-list-icon>update</mat-icon>Attempts</button>
 
     </mat-action-list>
 </mat-card>
