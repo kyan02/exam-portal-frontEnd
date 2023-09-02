@@ -8,14 +8,14 @@
                     <div mat-card-avatar class="example-header-image"></div>
                     <mat-card-title>{{a.questions.quiz.category.name}}</mat-card-title>
                     <mat-card-subtitle>{{a.questions.quiz.title}}</mat-card-subtitle>
+                    <div  class="result"></div>
                 </mat-card-header>
                 <mat-card-content>
-                   <button mat-raised-button color="accent" class="ml20"><h3 class="mt15">Deatil Report</h3> </button>   
-                   <button mat-button color="accent"><h3 class="mt15">ATTEMPT DATE: {{a.attemptedOn | date: 'dd-MM-yyyy'}}</h3> </button>                    
-                   <button mat-button color="primary"><h3 class="mt15"> | Total Attempted: {{a.totalAttempted}}</h3> </button>
-                   <button mat-button color="primary"><h3 class="mt15"> | Total Correct Answer: {{a.totalCorrectAnswer}}</h3> </button>  
-                   <button mat-button color="primary"><h3 class="mt15"> | Score: {{a.score}}</h3> </button> 
-                   <div mat-card-avatar class="result"></div>
+                   <button mat-raised-button color="accent"><h3 class="mt15">Deatil Report</h3> </button>   
+                   <button mat-button color="accent"><h3 class="mt15">   ATTEMPT DATE: {{a.attemptedOn | date: 'dd-MM-yyyy'}}</h3> </button>                    
+                   <button mat-button color="primary"><h3 class="mt15">| Total Attempted: {{a.totalAttempted}}</h3> </button>
+                   <button mat-button color="primary"><h3 class="mt15">| Total Correct Answer: {{a.totalCorrectAnswer}}</h3> </button>  
+                   <button mat-button color="primary"><h3 class="mt15">| Score: {{a.score}}</h3> </button> 
                 </mat-card-content>
                 </mat-card>
             </div>

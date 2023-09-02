@@ -10,8 +10,12 @@
 
 .result {
     display: inline-block; /* Display the div as an inline block */
-    width: 40px; /* Adjust the width as needed */
-    height: 40px; /* Adjust the height as needed */ /* Just an example background color */
+    width: 60px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */ /* Just an example background color */
     background-image: url("../../../../assets/fail.png");
     background-size: cover;
+    position:absolute;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 10px;
 }
